@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <div class="sm:flex flex-col sm:min-h-screen">
     <header class="-mt-6 wrapper">
       <div class="-translate-y-8">
         <FitText viewBox="0 0 49 11" content="Alex" valueY="11" />
       </div>
     </header>
-    <main>
+    <hr />
+    <main class="sm:flex-1 sm:py-8">
       <section class="pb-8">
         <div class="bg-green-200 wrapper relative">
           <a href="#/" class="text-black top-4 right-4 absolute">Read resume</a>
-          <picture class="aspect-square w-48 sm:w-64 mx-auto block">
+          <picture class="aspect-square w-48 sm:w-64 block">
             <img
               src="/alex.jpg"
               alt="Alex Valle"
@@ -18,7 +19,7 @@
           </picture>
         </div>
       </section>
-      <section class="border-y-2">
+      <section>
         <div class="wrapper p-8 sm:px-0">
           <h1 class="text-5xl mb-4">To whom it may concern</h1>
           <article
@@ -81,6 +82,7 @@
         </div>
       </section>
     </main>
+    <hr />
     <footer class="wrapper">
       <div class="translate-y-6">
         <FitText viewBox="0 0 59 11" content="Valle" valueY="11" />

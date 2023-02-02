@@ -8,7 +8,7 @@
     <div
       class="bg-amber-100 text-black sm:w-4/5 min-h-screen border-l border-black"
     >
-      <header class="grid sm:grid-cols-2 gap-2 px-4 py-8 sm:p-8 sm:gap-8">
+      <header class="grid sm:grid-cols-2 gap-8 px-4 py-8 sm:p-8">
         <picture class="block">
           <img
             src="/alex.jpg"
@@ -16,41 +16,71 @@
             class="object-cover h-full w-48 sm:w-full mx-auto"
           />
         </picture>
-        <div class="space-y-2">
-          <div></div>
+        <div class="space-y-2 sm:space-y-8">
+          <div class="text-2xl space-x-4">
+            <a
+              href="https://www.linkedin.com/in/alexv/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="lni lni-linkedin-original"></i
+            ></a>
+            <a
+              href="https://github.com/krystlc"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="lni lni-github-original"></i
+            ></a>
+            <a
+              href="https://etherscan.io/address/0xa8f85ddef6e25ccb073ef0f0c04ce53852e0f666"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="lni lni-ethereum"></i
+            ></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+          </div>
           <h1 class="text-4xl sm:text-6xl">Hello!</h1>
-          <p>
-            Welcome to my web developer resume site. I'm a skilled developer
-            with a passion for creating high-quality, user-friendly websites.
-            With years of experience in HTML, CSS, JavaScript and more, I'm
-            ready to bring your project to life. Explore my skills and
-            experience, and let's work together to create something great.
-            <a href="#/cover"> Read cover letter </a>.
-          </p>
+          <div class="space-y-4">
+            <p>
+              Welcome to my web developer resume site. I'm a skilled developer
+              with a passion for creating high-quality, user-friendly websites.
+            </p>
+            <p>
+              With years of experience in HTML, CSS, JavaScript and more, I'm
+              ready to bring your project to life. Explore my skills and
+              experience, and let's work together to create something great.
+            </p>
+            <p>
+              <a href="#/cover">
+                Read cover letter <i class="lni lni-arrow-top-right"></i
+              ></a>
+            </p>
+          </div>
         </div>
       </header>
       <aside
-        class="bg-black text-white p-4 sm:px-8 flex flex-col sm:flex-row justify-between gap-y-1 gap-x-8"
+        class="bg-black text-white p-4 sm:px-8 flex flex-col sm:flex-row gap-y-1 gap-x-8"
       >
         <h3>Contact</h3>
-        <a href="mailto:alex.valle@gmail.com">alex.valle@gmail.com</a>
-        <a
-          href="https://github.com/krystlc"
-          target="_blank"
-          rel="noopener noreferrer"
-          >github.com/krystlc</a
+        <span class="inline-flex items-center gap-2">
+          <i class="lni lni-envelope"></i>
+          <a href="mailto:alex.valle@gmail.com"> alex.valle@gmail.com</a>
+        </span>
+        <span class="inline-flex items-center gap-2"
+          ><i class="lni lni-discord-alt"></i> <code>peluchino#1541</code></span
         >
       </aside>
       <main class="px-4 py-8 sm:px-8 grid sm:grid-cols-2 auto-cols-fr gap-8">
-        <section>
+        <section class="space-y-4">
           <h2>Profile</h2>
           <p>
             I started my journey as a freelance web developer while traveling
             and have since elevated my skills in the tech-driven environment of
             New York City. With a focus on frontend development, I've recently
-            delved into the exciting world of web3 and smart contracts. In my
-            free time, I enjoy challenging myself through rock climbing and
-            cross country cycling. Looking to bring my passion for web
+            delved into the exciting world of web3 and smart contracts.
+          </p>
+          <p>
+            In my free time, I enjoy challenging myself through rock climbing
+            and cross country cycling. Looking to bring my passion for web
             development and my diverse interests to new and exciting projects.
           </p>
         </section>
@@ -77,12 +107,12 @@
         </section>
         <section>
           <h2>Skills</h2>
-          <dl class="grid grid-cols-5 gap-4">
+          <dl class="grid grid-cols-8 gap-4">
             <template v-for="item in skillItems">
-              <dt class="col-span-2">
+              <dt class="col-span-3">
                 <h4>{{ item.heading }}</h4>
               </dt>
-              <dd class="col-span-3">
+              <dd class="col-span-5">
                 <span>{{ item.subheading }}</span>
               </dd>
             </template>
@@ -96,9 +126,9 @@
               <div class="grid grid-cols-5 gap-1 flex-1">
                 <span
                   v-for="n in 5"
-                  class="border border-black border-opacity-10 p-1 relative"
+                  class="border border-black border-opacity-20 p-1 relative"
                   :class="{
-                    'before:bg-black before:inset-px before:absolute before:opacity-25 border-opacity-50':
+                    'before:bg-amber-400 before:inset-px before:absolute before:opacity-50 border-opacity-30':
                       n <= item,
                   }"
                 ></span>
@@ -107,6 +137,11 @@
           </ul>
         </section>
       </main>
+      <footer class="py-8 border-t border-black">
+        <p class="flex items-center justify-center">
+          made with <i class="lni lni-vuejs text-teal-600"></i>
+        </p>
+      </footer>
     </div>
   </div>
 </template>
@@ -140,33 +175,39 @@ const workExperienceItems: BaseItemWithYear[] = [
   {
     year: "2021-2023",
     heading: "THE WELL",
-    subheading: "Software Engineer",
+    subheading:
+      "Developed and maintained e-commerce website and editorial blog. Created standalone booking management application. Skilled in full-stack development and project management.",
   },
   {
     year: "2019-2021",
     heading: "Spirion",
-    subheading: "Software Engineer",
+    subheading:
+      "Assisted in developing information security web app. Helped monitor devices to prevent data leaks. Experienced in web development and information security.",
   },
   {
     year: "2015-2019",
     heading: "VICE Media",
-    subheading: "System Manager, Information Systems",
-  },
-  {
-    year: "2010-2015",
-    heading: "Freelance",
-    subheading: "Web Developer",
+    subheading:
+      "Developed internal micro web apps, including data visualizations. Skilled in front-end development and data analysis.",
   },
 ];
 
 const skillItems: BaseItem[] = [
   {
-    heading: "Buzzwords",
-    subheading: "Vue, Nuxt, Node.js, Metamask, Ethereum, etc.",
+    heading: "Frameworks",
+    subheading: "Vue, Nuxt, Graphql, Tailwind, Material, Bulma, etc.",
   },
   {
     heading: "Platforms",
     subheading: "AWS, GCP, Netlify, Vercel, Moralis, IPFS, Alchemy, etc.",
+  },
+  {
+    heading: "Web3",
+    subheading: "Ether.js, OpenZeppelin, Metamask, Manifold, etc.",
+  },
+  {
+    heading: "Gaming",
+    subheading: "Super Smash Bros Ultimate, Dark Souls III",
   },
 ];
 
@@ -180,7 +221,7 @@ const languageItems: Record<string, number> = {
 
 <style scoped>
 section h2 {
-  @apply text-2xl mb-4;
+  @apply text-3xl mb-4;
 }
 section h4 {
   @apply font-bold uppercase;
