@@ -6,11 +6,13 @@
       </div>
     </header>
     <hr />
-    <main class="sm:flex-1 sm:py-8">
-      <section class="pb-8">
+    <main class="py-8 sm:flex-1">
+      <section class="pb-4 sm:pb-0">
         <div class="bg-green-200 wrapper relative">
-          <a href="#/" class="text-black top-4 right-4 absolute">Read resume</a>
-          <picture class="aspect-square w-48 sm:w-64 block">
+          <a href="#/" class="text-black top-4 right-4 absolute"
+            >Read resume <i class="lni lni-arrow-top-right"></i
+          ></a>
+          <picture class="aspect-square w-48 sm:w-64 block sm:mx-auto">
             <img
               src="/alex.jpg"
               alt="Alex Valle"
@@ -20,7 +22,7 @@
         </div>
       </section>
       <section>
-        <div class="wrapper p-8 sm:px-0">
+        <div class="wrapper p-4 sm:p-8 sm:px-0">
           <h1 class="text-5xl mb-4">To whom it may concern</h1>
           <article
             class="grid sm:grid-cols-2 gap-4 sm:gap-16 text-justify leading-relaxed sm:text-sm text-gray-200"

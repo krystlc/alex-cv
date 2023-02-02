@@ -86,7 +86,7 @@
         </section>
         <section>
           <h2>Work Experience</h2>
-          <ul class="space-y-2">
+          <ul class="space-y-4 sm:space-y-2">
             <li v-for="item in workExperienceItems">
               <h4>{{ item.heading }} {{ item.year }}</h4>
               <span>{{ item.subheading }}</span>
@@ -137,9 +137,19 @@
           </ul>
         </section>
       </main>
-      <footer class="py-8 border-t border-black">
-        <p class="flex items-center justify-center">
-          made with <i class="lni lni-vuejs text-teal-600"></i>
+      <footer class="py-8 border-t-2 border-black text-center space-y-4">
+        <a
+          href="https://github.com/krystlc/alex-cv"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex gap-1 items-center"
+          >source code</a
+        >
+        <p>
+          made with
+          <span class="block text-4xl">
+            <i class="lni lni-vuejs text-teal-600"></i>
+          </span>
         </p>
       </footer>
     </div>
@@ -207,7 +217,7 @@ const skillItems: BaseItem[] = [
   },
   {
     heading: "Gaming",
-    subheading: "Super Smash Bros Ultimate, Dark Souls III",
+    subheading: "Super Smash Bros Ultimate, Dark Souls III, Elden Ring",
   },
 ];
 
