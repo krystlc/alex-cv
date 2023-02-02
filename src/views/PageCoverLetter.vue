@@ -11,7 +11,7 @@
           <a href="#/" class="text-black top-4 right-4 absolute">Read resume</a>
           <picture class="aspect-square w-48 sm:w-64 mx-auto block">
             <img
-              src="public/alex.jpg"
+              src="/alex.jpg"
               alt="Alex Valle"
               class="object-fill h-full w-full"
             />

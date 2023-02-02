@@ -11,7 +11,7 @@
       <header class="grid sm:grid-cols-2 gap-2 px-4 py-8 sm:p-8 sm:gap-8">
         <picture class="block">
           <img
-            src="/public/alex.jpg"
+            src="/alex.jpg"
             alt="Alex Valle"
             class="object-cover h-full w-48 sm:w-full mx-auto"
           />
