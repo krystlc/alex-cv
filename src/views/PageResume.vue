@@ -147,8 +147,9 @@
         >
         <p>
           made with
-          <span class="block text-4xl">
+          <span class="flex items-center gap-1 justify-center">
             <i class="lni lni-vuejs text-teal-600"></i>
+            <i class="lni lni-lineicons-symbol text-purple-500"></i>
           </span>
         </p>
       </footer>
