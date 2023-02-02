@@ -17,8 +17,8 @@
           />
         </picture>
         <div class="space-y-2">
-          <div>symbols</div>
-          <h1 class="text-4xl">Hello!</h1>
+          <div></div>
+          <h1 class="text-4xl sm:text-6xl">Hello!</h1>
           <p>
             Welcome to my web developer resume site. I'm a skilled developer
             with a passion for creating high-quality, user-friendly websites.
@@ -41,7 +41,7 @@
           >github.com/krystlc</a
         >
       </aside>
-      <main class="px-4 py-8 grid sm:grid-cols-2 auto-cols-fr gap-8">
+      <main class="px-4 py-8 sm:px-8 grid sm:grid-cols-2 auto-cols-fr gap-8">
         <section>
           <h2>Profile</h2>
           <p>
@@ -162,7 +162,7 @@ const workExperienceItems: BaseItemWithYear[] = [
 const skillItems: BaseItem[] = [
   {
     heading: "Buzzwords",
-    subheading: "Vue, React, Nuxt, Metamask, Ethereum, etc.",
+    subheading: "Vue, Nuxt, Node.js, Metamask, Ethereum, etc.",
   },
   {
     heading: "Platforms",
