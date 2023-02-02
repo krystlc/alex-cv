@@ -8,6 +8,11 @@
     <main>
       <section class="pb-8">
         <div class="bg-green-300 wrapper relative">
+          <a
+            href="#/"
+            class="bg-green-100 p-2 text-black top-4 right-4 absolute"
+            >Read resume</a
+          >
           <picture class="aspect-square w-48 sm:w-64 mx-auto block">
             <img
               src="public/alex.jpg"
