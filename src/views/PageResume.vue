@@ -210,7 +210,8 @@ const skillItems: BaseItem[] = [
   },
   {
     heading: "Platforms",
-    subheading: "AWS, GCP, Netlify, Vercel, Moralis, IPFS, Alchemy, etc.",
+    subheading:
+      "AWS, GCP, Netlify, Vercel, Terraform, Sendgrid, Moralis, IPFS, Alchemy, etc.",
   },
   {
     heading: "Web3",

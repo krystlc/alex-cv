@@ -64,9 +64,7 @@
                 delivering high-quality solutions. My strong proficiency in
                 these technologies allows me to develop innovative and
                 user-friendly applications that meet the demands of today's
-                market. Whether I am working on a complex project or
-                collaborating with a team, I bring a level of technical skill
-                and creativity that is unmatched.
+                market.
               </p>
 
               <p>
