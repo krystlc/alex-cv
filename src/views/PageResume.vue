@@ -6,28 +6,27 @@
       </div>
     </div>
     <div
-      class="bg-amber-100 text-black sm:w-4/5 min-h-screen border-l border-black"
+      class="bg-amber-100 text-black sm:w-4/5 min-h-screen sm:border-l border-black print:grid grid-cols-10 gap-8"
     >
-      <header class="grid sm:grid-cols-2 gap-8 px-4 py-8 sm:p-8">
-        <picture class="block">
+      <header
+        class="grid sm:grid-cols-2 print:flex gap-8 px-4 py-8 sm:p-8 print:col-span-6 print:p-0"
+      >
+        <picture class="block print:shrink-0">
           <img
             src="/alex.jpg"
             alt="Alex Valle"
-            class="object-cover h-full w-48 sm:w-full mx-auto"
+            class="object-cover h-full w-48 sm:w-full mx-auto print:h-32 print:w-32"
           />
         </picture>
         <div class="space-y-2 sm:space-y-8">
-          <div class="text-2xl space-x-4">
+          <div class="text-2xl space-x-4 print:hidden">
             <a
               href="https://www.linkedin.com/in/alexv/"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="lni lni-linkedin-original"></i
             ></a>
-            <a
-              href="https://github.com/krystlc"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href="https://github.com/krystlc" target="_blank" rel="noopener noreferrer"
               ><i class="lni lni-github-original"></i
             ></a>
             <a
@@ -38,18 +37,18 @@
             ></a>
             <a href="http://" target="_blank" rel="noopener noreferrer"></a>
           </div>
-          <h1 class="text-4xl sm:text-6xl">Hello!</h1>
+          <h1 class="text-4xl sm:text-6xl print:hidden">Hello!</h1>
           <div class="space-y-4">
             <p>
-              Welcome to my web developer resume site. I'm a skilled developer
-              with a passion for creating high-quality, user-friendly websites.
+              I'm a skilled developer with a passion for creating high-quality,
+              user-friendly websites. With years of experience in HTML, CSS, JavaScript
+              and more, I'm ready to bring your project to life.
             </p>
             <p>
-              With years of experience in HTML, CSS, JavaScript and more, I'm
-              ready to bring your project to life. Explore my skills and
-              experience, and let's work together to create something great.
+              Explore my skills and experience, and let's work together to create
+              something great.
             </p>
-            <p>
+            <p class="print:hidden">
               <a href="#/cover">
                 Read cover letter <i class="lni lni-arrow-top-right"></i
               ></a>
@@ -58,7 +57,7 @@
         </div>
       </header>
       <aside
-        class="bg-black text-white p-4 sm:px-8 flex flex-col sm:flex-row gap-y-1 gap-x-8"
+        class="bg-black text-white p-4 sm:px-8 flex flex-col sm:flex-row gap-y-1 gap-x-8 print:col-span-4 print:text-black"
       >
         <h3>Contact</h3>
         <span class="inline-flex items-center gap-2">
@@ -69,75 +68,84 @@
           ><i class="lni lni-discord-alt"></i> <code>peluchino#1541</code></span
         >
       </aside>
-      <main class="px-4 py-8 sm:px-8 grid sm:grid-cols-2 auto-cols-fr gap-8">
-        <section class="space-y-4">
-          <h2>Profile</h2>
-          <p>
-            I started my journey as a freelance web developer while traveling
-            and have since elevated my skills in the tech-driven environment of
-            New York City. With a focus on frontend development, I've recently
-            delved into the exciting world of web3 and smart contracts.
-          </p>
-          <p>
-            In my free time, I enjoy challenging myself through rock climbing
-            and cross country cycling. Looking to bring my passion for web
-            development and my diverse interests to new and exciting projects.
-          </p>
-        </section>
-        <section>
-          <h2>Work Experience</h2>
-          <ul class="space-y-4 sm:space-y-2">
-            <li v-for="item in workExperienceItems">
-              <h4>{{ item.heading }} {{ item.year }}</h4>
-              <span>{{ item.subheading }}</span>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Education</h2>
-          <dl class="grid grid-cols-8 gap-4">
-            <template v-for="item in educationItems">
-              <dt class="font-bold col-span-3">{{ item.year }}</dt>
-              <dd class="col-span-5">
-                <h4>{{ item.heading }}</h4>
-                <span>{{ item.subheading }}</span>
-              </dd>
-            </template>
-          </dl>
-        </section>
-        <section>
-          <h2>Skills</h2>
-          <dl class="grid grid-cols-8 gap-4">
-            <template v-for="item in skillItems">
-              <dt class="col-span-3">
-                <h4>{{ item.heading }}</h4>
-              </dt>
-              <dd class="col-span-5">
-                <span>{{ item.subheading }}</span>
-              </dd>
-            </template>
-          </dl>
-        </section>
-        <section>
-          <h2>Languages</h2>
-          <ul class="space-y-2">
-            <li v-for="(item, key) in languageItems" class="flex">
-              <h4 class="w-2/5">{{ key }}</h4>
-              <div class="grid grid-cols-5 gap-1 flex-1">
-                <span
-                  v-for="n in 5"
-                  class="border border-black border-opacity-20 p-1 relative"
-                  :class="{
-                    'before:bg-amber-400 before:inset-px before:absolute before:opacity-50 border-opacity-30':
-                      n <= item,
-                  }"
-                ></span>
-              </div>
-            </li>
-          </ul>
-        </section>
+      <main
+        class="px-4 py-8 sm:px-8 overflow-hidden print:col-span-10 grid sm:grid-cols-2 gap-8"
+      >
+        <div>
+          <section>
+            <h2>Work Experience</h2>
+            <ul class="space-y-4 sm:space-y-2">
+              <li v-for="(item, n) in workExperienceItems">
+                <h4>{{ item.heading }} {{ item.year }}</h4>
+                <p>{{ item.subheading }}</p>
+                <details
+                  v-if="item.list"
+                  class="group [&_summary::-webkit-details-marker]:hidden"
+                  :open="n === 0"
+                >
+                  <summary
+                    class="inline-flex text-xs font-medium tracking-widest uppercase gap-1 items-center justify-between py-2 cursor-pointer print:hidden"
+                  >
+                    Read more
+                    <i
+                      class="lni lni-chevron-down group-open:-rotate-180 transition-all"
+                    ></i>
+                  </summary>
+                  <ul class="list-outside px-4 pb-8 space-y-2">
+                    <li v-for="li in item.list" class="list-disc pl-2">
+                      {{ li }}
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="space-y-8">
+          <section class="space-y-4">
+            <h2>Profile</h2>
+            <p>
+              I started my journey as a freelance web developer while traveling and have
+              since elevated my skills in the tech-driven environment of New York City.
+              With a focus on frontend development, I've recently delved into the exciting
+              world of web3 and smart contracts.
+            </p>
+            <p>
+              In my free time, I enjoy challenging myself through rock climbing and cross
+              country cycling. Looking to bring my passion for web development and my
+              diverse interests to new and exciting projects.
+            </p>
+          </section>
+          <section>
+            <h2>Education</h2>
+            <dl class="grid grid-cols-8 gap-4">
+              <template v-for="item in educationItems">
+                <dt class="font-bold col-span-3">{{ item.year }}</dt>
+                <dd class="col-span-5">
+                  <h4>{{ item.heading }}</h4>
+                  <span>{{ item.subheading }}</span>
+                </dd>
+              </template>
+            </dl>
+          </section>
+          <section>
+            <h2>Skills</h2>
+            <dl class="grid grid-cols-8 gap-4">
+              <template v-for="item in skillItems">
+                <dt class="col-span-3">
+                  <h4>{{ item.heading }}</h4>
+                </dt>
+                <dd class="col-span-5">
+                  <span>{{ item.subheading }}</span>
+                </dd>
+              </template>
+            </dl>
+          </section>
+        </div>
       </main>
-      <footer class="py-8 border-t-2 border-black text-center space-y-4">
+      <footer
+        class="clear-both py-8 border-t-2 border-black text-center space-y-4 print:hidden"
+      >
         <a
           href="https://github.com/krystlc/alex-cv"
           target="_blank"
@@ -158,77 +166,111 @@
 </template>
 
 <script lang="ts" setup>
-import FitText from "../components/FitText.vue";
+import FitText from '../components/FitText.vue'
 
 interface BaseItem {
-  heading: string;
-  subheading: string;
+  heading: string
+  subheading: string
 }
 
-interface BaseItemWithYear extends BaseItem {
-  year: string;
+interface IEducation extends BaseItem {
+  year: string
 }
 
-const educationItems: BaseItemWithYear[] = [
-  {
-    year: "2004-2006",
-    heading: "University of South Florida",
-    subheading: "Tampa, FL",
-  },
-  {
-    year: "2003",
-    heading: "Freedom High School",
-    subheading: "Tampa, FL",
-  },
-];
+interface IWorkExperience extends BaseItem {
+  year: string
+  list?: string[]
+}
 
-const workExperienceItems: BaseItemWithYear[] = [
+const educationItems: IEducation[] = [
   {
-    year: "2021-2023",
-    heading: "THE WELL",
-    subheading:
-      "Developed and maintained e-commerce website and editorial blog. Created standalone booking management application. Skilled in full-stack development and project management.",
+    year: '2004-2006',
+    heading: 'University of South Florida',
+    subheading: 'Tampa, FL'
   },
   {
-    year: "2019-2021",
-    heading: "Spirion",
+    year: '2003',
+    heading: 'Freedom High School',
+    subheading: 'Tampa, FL'
+  }
+]
+
+const workExperienceItems: IWorkExperience[] = [
+  {
+    list: [
+      'Led front end development of bespoke online booking experience for THE WELL increasing the volume of online booking to 50% of total bookings.',
+      'Spearhead end to end development of THE WELL editorial blog re-design, leading it to be the number traffic generator to the website.',
+      'Managed continuous enhancements and maintenance of the-well.com e-commerce and content pages.',
+      'Collaborated cross functionally with back end engineers, UX/UI designers, product managers, brand/marketing, and operations to launch new features'
+    ],
+    year: '2021-2023',
+    heading: 'THE WELL',
     subheading:
-      "Assisted in developing information security web app. Helped monitor devices to prevent data leaks. Experienced in web development and information security.",
+      'Developed and maintained e-commerce website and editorial blog. Created standalone booking management application. Skilled in full-stack development and project management.'
+  },
+  // {
+  //   list: [
+  //     'Led front end development of bespoke online booking experience for THE WELL increasing the volume of online booking to 50% of total bookings.',
+  //     'Spearhead end to end development of THE WELL editorial blog re-design, leading it to be the number traffic generator to the website.',
+  //     'Managed continuous enhancements and maintenance of the-well.com e-commerce and content pages.',
+  //     'Collaborated cross functionally with back end engineers, UX/UI designers, product managers, brand/marketing, and operations to launch new features'
+  //   ],
+  //   year: '2022',
+  //   heading: 'Decentralized Marketplace',
+  //   subheading:
+  //     'Developed and maintained e-commerce website and editorial blog. Created standalone booking management application. Skilled in full-stack development and project management.'
+  // },
+  // {
+  //   list: [
+  //     'Led front end development of bespoke online booking experience for THE WELL increasing the volume of online booking to 50% of total bookings.',
+  //     'Spearhead end to end development of THE WELL editorial blog re-design, leading it to be the number traffic generator to the website.',
+  //     'Managed continuous enhancements and maintenance of the-well.com e-commerce and content pages.',
+  //     'Collaborated cross functionally with back end engineers, UX/UI designers, product managers, brand/marketing, and operations to launch new features'
+  //   ],
+  //   year: '2021',
+  //   heading: 'NFT Rarirty Scanner',
+  //   subheading:
+  //     'Developed and maintained e-commerce website and editorial blog. Created standalone booking management application. Skilled in full-stack development and project management.'
+  // },
+  {
+    list: [
+      'Led front end development of bespoke online booking experience for THE WELL increasing the volume of online booking to 50% of total bookings.',
+      'Spearhead end to end development of THE WELL editorial blog re-design, leading it to be the number traffic generator to the website.',
+      'Managed continuous enhancements and maintenance of the-well.com e-commerce and content pages.',
+      'Collaborated cross functionally with back end engineers, UX/UI designers, product managers, brand/marketing, and operations to launch new features'
+    ],
+    year: '2019-2021',
+    heading: 'Spirion',
+    subheading:
+      'Assisted in developing information security web app. Helped monitor devices to prevent data leaks. Experienced in web development and information security.'
   },
   {
-    year: "2015-2019",
-    heading: "VICE Media",
+    year: '2015-2019',
+    heading: 'VICE Media',
     subheading:
-      "Developed internal micro web apps, including data visualizations. Skilled in front-end development and data analysis.",
-  },
-];
+      'Developed internal micro web apps, including data visualizations. Skilled in front-end development and data analysis.'
+  }
+]
 
 const skillItems: BaseItem[] = [
   {
-    heading: "Frameworks",
-    subheading: "Vue, Nuxt, Graphql, Tailwind, Material, Bulma, etc.",
+    heading: 'Frameworks',
+    subheading: 'Vue, Nuxt, Graphql, Tailwind, Material, Bulma, etc.'
   },
   {
-    heading: "Platforms",
+    heading: 'Platforms',
     subheading:
-      "AWS, GCP, Netlify, Vercel, Terraform, Sendgrid, Stripe, Moralis, IPFS, Alchemy, etc.",
+      'AWS, GCP, Netlify, Vercel, Terraform, Sendgrid, Stripe, Moralis, IPFS, Alchemy, etc.'
   },
   {
-    heading: "Web3",
-    subheading: "Ether.js, OpenZeppelin, Manifold, Metamask, etc.",
+    heading: 'Web3',
+    subheading: 'Ether.js, OpenZeppelin, Manifold, Metamask, etc.'
   },
   {
-    heading: "Gaming",
-    subheading: "Super Smash Bros Ultimate, Dark Souls III, Elden Ring",
-  },
-];
-
-const languageItems: Record<string, number> = {
-  English: 4,
-  Spanish: 4,
-  Japanese: 1,
-  Korean: 1,
-};
+    heading: 'Gaming',
+    subheading: 'Super Smash Bros Ultimate, Dark Souls III, Elden Ring'
+  }
+]
 </script>
 
 <style scoped>
