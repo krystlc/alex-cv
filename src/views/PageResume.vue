@@ -203,7 +203,7 @@ const workExperienceItems: IWorkExperience[] = [
       "Led front end development of bespoke online booking experience for THE WELL increasing the volume of online booking to 50% of total bookings.",
       "Spearhead end to end development of THE WELL editorial blog re-design, leading it to be the number one traffic generator to the website.",
       "Managed continuous enhancements and maintenance of the-well.com e-commerce and content pages.",
-      "Collaborated cross functionally with back end engineers, UX/UI designers, product managers, brand/marketing, and operations to launch new features",
+      "Collaborated cross functionally with backend engineers, UX/UI designers, product managers, brand/marketing, and operations to launch new features",
     ],
   },
   {
