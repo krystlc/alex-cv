@@ -49,13 +49,10 @@
           <h1 class="text-4xl sm:text-6xl">Hello!</h1>
           <div class="space-y-4">
             <p>
-              I'm a skilled developer with a passion for creating high-quality,
-              user-friendly websites. With years of experience in HTML, CSS,
-              JavaScript and more, I'm ready to bring your project to life.
-            </p>
-            <p>
-              Explore my skills and experience, and let's work together to
-              create something great.
+              I'm a Full Stack Web Developer with a solid skill set. My
+              mainstays are JavaScript, TypeScript, Node.js, Vue, and React.
+              I've worked in both mid-sized corporate companies and startups,
+              both in teams and independently.
             </p>
             <p>
               <a href="#/cover">
@@ -74,10 +71,23 @@
           <a href="mailto:alex.valle@gmail.com"> alex.valle@gmail.com</a>
         </span>
         <span class="inline-flex items-center gap-2"
-          ><i class="lni lni-discord-alt"></i> <code>peluchino#1541</code></span
-        >
+          ><i class="lni lni-discord-alt"></i> <code>peluchino#1541</code>
+        </span>
       </aside>
       <main class="px-4 py-8 sm:px-8 overflow-hidden grid gap-8 print:p-0">
+        <section>
+          <h2>Latest Projects</h2>
+          <ul class="space-y-4 sm:space-y-2">
+            <li v-for="(item, n) in latestProjects">
+              <h4>
+                <a :href="item.href" target="_blank" rel="noopener noreferrer">
+                  {{ item.heading }} <i class="lni lni-arrow-top-right"></i>
+                </a>
+              </h4>
+              <p>{{ item.subheading }}</p>
+            </li>
+          </ul>
+        </section>
         <section>
           <h2>Work Experience</h2>
           <ul class="space-y-4 sm:space-y-2">
@@ -109,15 +119,18 @@
         <section class="space-y-4 print:order-first">
           <h2>Profile</h2>
           <p>
-            I started my journey as a freelance web developer while traveling
-            and have since elevated my skills in the tech-driven environment of
-            New York City. With a focus on frontend development, I've recently
-            delved into the exciting world of web3 and smart contracts.
+            I specialize in Full Stack Web Development. On the front-end, I use
+            JavaScript and TypeScript to create user-friendly interfaces, while
+            on the back-end, I leverage Node.js for efficient server-side
+            solutions. I'm experienced in working with popular front-end
+            libraries like Vue and React.
           </p>
           <p>
-            In my free time, I enjoy challenging myself through rock climbing
-            and cross country cycling. Looking to bring my passion for web
-            development and my diverse interests to new and exciting projects.
+            Throughout my career, I've worked in different environments, from
+            mid-sized corporate companies, where I've collaborated in team
+            settings, to startups, where I've tackled projects independently. My
+            focus is on practical web development without any unnecessary
+            embellishments.
           </p>
         </section>
         <section>
@@ -184,6 +197,30 @@ interface IWorkExperience extends BaseItem {
   year: string;
   list?: string[];
 }
+
+interface IProject extends BaseItem {
+  href: string;
+}
+
+const latestProjects: IProject[] = [
+  {
+    heading: "Loren Valle Art",
+    subheading: "an art gallery Vue SPA hosted on Netlify.",
+    href: "https://lorenvalleart.com/",
+  },
+  {
+    heading: "Copy Pasta",
+    subheading:
+      "a content generator using OpenAI and Stable Diffusion, AWS Amplify, Lambda, Appsync, Vue, etc.",
+    href: "https://ai.intermezzolabs.xyz/",
+  },
+  {
+    heading: "Tala Inventory & POS",
+    subheading:
+      "an inventory system for small businesses, using Coinbase for crypto payments, AWS Amplify, Lambda, DynamoDb, etc.",
+    href: "https://tala.intermezzolabs.xyz/",
+  },
+];
 
 const educationItems: IEducation[] = [
   {
@@ -252,12 +289,12 @@ const workExperienceItems: IWorkExperience[] = [
 const skillItems: BaseItem[] = [
   {
     heading: "Frameworks",
-    subheading: "Vue, Nuxt, Graphql, Tailwind, Material, Bulma, etc.",
+    subheading: "Vue, Nuxt, React, Graphql, TailwindCSS, Material, Bulma, etc.",
   },
   {
     heading: "Platforms",
     subheading:
-      "AWS, GCP, Netlify, Vercel, Terraform, Sendgrid, Stripe, Moralis, IPFS, Alchemy, etc.",
+      "AWS, GCP, Netlify, Vercel, Sendgrid, Stripe, Moralis, IPFS, Alchemy, etc.",
   },
   {
     heading: "Web3",
@@ -265,7 +302,8 @@ const skillItems: BaseItem[] = [
   },
   {
     heading: "Gaming",
-    subheading: "Super Smash Bros Ultimate, Dark Souls III, Elden Ring",
+    subheading:
+      "Super Smash Bros Ultimate, Dark Souls III, Elden Ring, Zelda: Tears of the Kingdom",
   },
 ];
 </script>
