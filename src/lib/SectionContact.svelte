@@ -38,13 +38,3 @@
     </div>
   </div>
 </div>
-
-<style scoped>
-  form input,
-  form textarea {
-    @apply font-semibold border-b-2 border-black pb-2 w-full bg-transparent outline-none placeholder:text-black placeholder:uppercase placeholder:tracking-widest;
-  }
-  button {
-    @apply uppercase font-semibold tracking-widest block p-4 w-full border-2 border-black hover:bg-indigo-200;
-  }
-</style>
