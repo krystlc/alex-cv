@@ -1,76 +1,47 @@
-I'm a skilled developer with a passion for creating high-quality, user-friendly websites. With years of experience in HTML, CSS, JavaScript and more, I'm ready to bring your project to life.
+# Svelte + TS + Vite
 
-Explore my skills and experience, and let's work together to create something great.
+This template should help get you started developing with Svelte and TypeScript in Vite.
 
-## WORK EXPERIENCE
+## Recommended IDE Setup
 
-- #### THE WELL 2021-2023
+[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
 
-  Developed and maintained e-commerce website and editorial blog. Created standalone booking management application. Skilled in full-stack development and project management.
+## Need an official Svelte framework?
 
-  - Led front end development of bespoke online booking experience for THE WELL increasing the volume of online booking to 50% of total bookings.
-  - Spearhead end to end development of THE WELL editorial blog re-design, leading it to be the number one traffic generator to the website.
-  - Managed continuous enhancements and maintenance of the-well.com e-commerce and content pages.
-  - Collaborated cross functionally with backend engineers, UX/UI designers, product managers, brand/marketing, and operations to launch new features
+Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
 
-- #### DECENTRALIZED WINE MARKETPLACE 2022
+## Technical considerations
 
-  Developed a decentralized marketplace and inventory system managed by smart contracts on the Polygon network, with data hosted on the IPFS platform.
+**Why use this over SvelteKit?**
 
-  - Designed and developed a decentralized wine marketplace that enabled users to buy and sell wine bottles in a transparent and trust-based environment.
-  - Implemented a decentralized inventory system managed by smart contracts on the Polygon network, ensuring the security and integrity of the wine data.
-  - Created tokens to represent each bottle of wine and hosted their metadata on IPFS, providing investors with a trustless historical record and greater confidence in their purchases.
+- It brings its own routing solution which might not be preferable for some users.
+- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
 
-- #### NFT RARITY SCANNER 2021
+This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
 
-  Created an NFT ranking system that intake a smart contract address and ranks tokens based on their metadata.
+Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
 
-  - Developed a highly successful and lucrative NFT ranking system that was able to rank tokens based on their metadata.
-  - Implemented an efficient system to capture and save token metadata, ensuring the accuracy and reliability of the ranked data.
-  - Built a proprietary NFT that provided users with access to the ranked data, which became incredibly popular in a short period of time.
-  - The NFT Rarity Scanner ranked in the top 20,000 websites in the world within weeks of launch, with over 500 backers supporting the project. This was a testament to the success and high demand for the NFT ranking system.
+**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
 
-- #### SPIRION 2019-2021
+Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
 
-  Frontend developer for an application that finds all structured and unstructured data across all networks, cloud file storage systems, remote file servers, and endpoints.
+**Why include `.vscode/extensions.json`?**
 
-  - Developed a brand new application for administrators.
-  - Utilized Spirion's legacy software through RESTful APIs.
-  - Worked with design team to create a user-friendly dashboard.
-  - Improved user experience for administrators monitoring servers and endpoints.
+Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
 
-- #### VICE MEDIA 2015-2019
+**Why enable `allowJs` in the TS template?**
 
-  Developed internal micro web apps, including data visualizations. Skilled in front-end development and data analysis.
+While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
 
-## PROFILE
+**Why is HMR not preserving my local component state?**
 
-I started my journey as a freelance web developer while traveling and have since elevated my skills in the tech-driven environment of New York City. With a focus on frontend development, I've recently delved into the exciting world of web3 and smart contracts.
+HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
 
-In my free time, I enjoy challenging myself through rock climbing and cross country cycling. Looking to bring my passion for web development and my diverse interests to new and exciting projects.
+If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
 
-## EDUCATION
-
-2004-2006
-
-#### UNIVERSITY OF SOUTH FLORIDA
-
-Tampa, FL
-
-## SKILLS
-
-#### FRAMEWORKS
-
-Vue, Nuxt, Graphql, Tailwind, Material, Bulma, etc.
-
-#### PLATFORMS
-
-AWS, GCP, Netlify, Vercel, Terraform, Sendgrid, Stripe, Moralis, IPFS, Alchemy, etc.
-
-#### WEB3
-
-Ether.js, OpenZeppelin, Manifold, Metamask, etc.
-
-#### GAMING
-
-Super Smash Bros Ultimate, Dark Souls III, Elden Ring
+```ts
+// store.ts
+// An extremely simple external store
+import { writable } from 'svelte/store'
+export default writable(0)
+```

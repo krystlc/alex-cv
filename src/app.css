@@ -1,0 +1,13 @@
+@tailwind utilities;
+@tailwind components;
+@tailwind base;
+
+h3 {
+  @apply text-xl uppercase font-semibold tracking-widest;
+}
+p {
+  @apply leading-relaxed;
+}
+p a {
+  @apply font-bold  underline underline-offset-2 hover:no-underline;
+}
