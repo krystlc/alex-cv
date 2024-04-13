@@ -34,11 +34,11 @@
   <div
     class="bg-rose-500 text-white p-8 md:p-16 md:float-right md:-mt-16 md:ml-8 md:mb-8 z-10 relative"
   >
-    <div class=" space-y-8">
+    <div class="space-y-8">
       <div>
         <p class=" uppercase tracking-widest">Email</p>
         <p>
-          <a href="mailto:hello@donotsend.com">alex.valle@gmail.com</a>
+          <a href="mailto:alex.valle@gmail.com">alex.valle@gmail.com</a>
         </p>
       </div>
       <div>
