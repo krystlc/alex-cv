@@ -37,41 +37,6 @@
       </a>
     </div>
   </div>
-  <div class="max-w-3xl">
-    <form class="space-y-4">
-      <p>
-        <span data-name="your-name"
-          ><input
-            placeholder="Name"
-            value=""
-            type="text"
-            name="your-name"
-            required
-          /></span
-        >
-      </p>
-      <p>
-        <span data-name="your-email"
-          ><input
-            placeholder="Email"
-            value=""
-            type="email"
-            name="your-email"
-            required
-          /></span
-        >
-      </p>
-      <p>
-        <span data-name="your-message">
-          <textarea rows="4" placeholder="Message" name="your-message" required
-          ></textarea>
-        </span>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
-  </div>
 </div>
 
 <style scoped>

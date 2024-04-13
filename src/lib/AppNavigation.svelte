@@ -24,10 +24,10 @@
       label: "Projects",
       value: "projects",
     },
-    {
-      label: "Blog",
-      value: "blog",
-    },
+    // {
+    //   label: "Blog",
+    //   value: "blog",
+    // },
     {
       label: "Skills",
       value: "skills",

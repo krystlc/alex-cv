@@ -1,6 +1,7 @@
 <script>
   import viewport from "../hooks/useViewportAction";
   import SectionTitle from "./SectionTitle.svelte";
+  import banner from "/banner.jpeg";
 
   let isBlockViewed = false;
 </script>
@@ -20,7 +21,7 @@
   </div>
   <div class="h-48">
     <img
-      src="/banner.jpeg"
+      src={banner}
       alt="Alex Valle"
       class=" object-cover h-full block duration-1000 opacity-0"
       class:-translate-x-4={isBlockViewed}

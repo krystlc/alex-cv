@@ -2,6 +2,7 @@
   import { Icon } from "svelte-icons-pack";
   import { CgChevronDoubleDown } from "svelte-icons-pack/cg";
   import viewport from "../hooks/useViewportAction";
+  import alex from "/alex.jpg";
 
   let isCoverViewed = false;
 </script>
@@ -27,7 +28,7 @@
   </div>
   <div class="md:py-16">
     <img
-      src="/alex.jpg"
+      src={alex}
       alt="Alex Valle"
       class="h-full object-cover transition-all block duration-1000 opacity-0"
       class:translate-x-12={isCoverViewed}

@@ -19,7 +19,7 @@ export const sections: { id: SectionID; component: any }[] = [
   { id: "experience", component: SectionExperience },
   { id: "about", component: SectionAbout },
   { id: "projects", component: SectionProjects },
-  { id: "blog", component: SectionBlog },
+  // { id: "blog", component: SectionBlog },
   { id: "skills", component: SectionSkills },
   { id: "contact", component: SectionContact },
 ];
