@@ -27,9 +27,7 @@
           <ul>
             {#each post.categories as cat}
               <li>
-                <a href="#">
-                  {cat}
-                </a>
+                {cat}
               </li>
             {/each}
           </ul>
