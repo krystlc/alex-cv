@@ -31,16 +31,16 @@
   }
 </script>
 
-<div class="md:grid grid-cols-3">
+<div class="lg:grid grid-cols-3">
   <header
-    class="bg-indigo-50 top-0 z-20 md:col-span-1 md:order-last sticky md:h-screen md:flex-col md:justify-center md:p-16"
+    class="bg-indigo-50 top-0 z-20 lg:col-span-1 lg:order-last sticky lg:h-screen lg:flex-col lg:justify-center lg:p-16"
   >
     <AppNavigation {currentSection} />
   </header>
   <main class="col-span-2">
     <div class="mx-auto max-w-3xl">
       {#each sections as { id, component }}
-        <section {id} class="py-8 px-2 md:px-0 md:py-16">
+        <section {id} class="py-8 px-2 lg:px-0 lg:py-16">
           <svelte:component this={component} />
         </section>
       {/each}

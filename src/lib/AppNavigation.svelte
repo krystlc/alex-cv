@@ -42,24 +42,24 @@
 </script>
 
 <div>
-  <div class="flex justify-between p-4 md:p-0">
-    <button on:click={() => (openNav = !openNav)} class="md:hidden">
+  <div class="flex justify-between p-4 lg:p-0">
+    <button on:click={() => (openNav = !openNav)} class="lg:hidden">
       <Icon src={CgMenuLeftAlt} size={32} />
       <span class=" sr-only">Menu</span>
     </button>
     <div class="flex gap-1 font-bold items-center">
-      <span class=" text-indigo-500">{sectionNum}</span>
-      <span class=" text-xl">/</span>
+      <span class="text-indigo-500">{sectionNum}</span>
+      <span class="text-xl">/</span>
       <span>07</span>
     </div>
   </div>
   <div
-    class="text-xl md:text-base fixed top-0 left-0 h-screen bg-white z-20 flex flex-col p-4 gap-16 w-80 md:px-0 py-16 md:static md:h-auto md:w-auto md:bg-transparent transition-transform delay-75 duration-150 ease-out {openNav
+    class="text-xl lg:text-base fixed overflow-auto top-0 left-0 h-screen bg-white z-20 flex flex-col p-4 gap-16 w-80 lg:px-0 py-16 lg:static lg:h-auto lg:w-auto lg:bg-transparent transition-transform delay-75 duration-150 ease-out {openNav
       ? 'translate-x-0 shadow-2xl'
-      : '-translate-x-full md:translate-x-0'}"
+      : '-translate-x-full lg:translate-x-0'}"
   >
     <button
-      class="md:hidden ml-auto text-xs uppercase tracking-widest"
+      class="lg:hidden ml-auto text-xs uppercase tracking-widest"
       on:click={() => (openNav = false)}
     >
       <Icon src={CgClose} size={24} />
