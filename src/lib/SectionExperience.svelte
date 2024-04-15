@@ -72,6 +72,10 @@
     on:exitViewport={() => (isBlockViewed = false)}
   >
     <a href="#projects">My Projects</a>
+    <a
+      href="https://krystlc.github.io/alex-cv/Alex%20Valle%20-%20Software%20Engineer.pdf"
+      target="_blank">My Resume/CV</a
+    >
   </aside>
   <aside class="grid md:grid-cols-2 gap-16">
     {#each services as item}
