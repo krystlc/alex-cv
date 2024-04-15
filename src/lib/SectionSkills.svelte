@@ -1,4 +1,5 @@
 <script>
+  import viewport from "../hooks/useViewportAction";
   import SectionTitle from "./SectionTitle.svelte";
 
   const timeline = [
@@ -70,6 +71,8 @@
       value: 95,
     },
   ];
+
+  let isBlockViewed = false;
 </script>
 
 <div>
@@ -110,15 +113,21 @@
       {/each}
     </table>
   </div>
-  <section class="grid md:grid-cols-2 gap-x-16 gap-y-8 md:gap-y-4">
+  <section
+    class="grid md:grid-cols-2 gap-x-16 gap-y-8 md:gap-y-4"
+    use:viewport
+    on:enterViewport={() => (isBlockViewed = true)}
+    on:exitViewport={() => (isBlockViewed = false)}
+  >
     {#each skills as skill}
       <div class="grid grid-cols-5 items-center">
         <h5 class=" col-span-2 uppercase tracking-widest font-semibold text-xs">
           {skill.title}
         </h5>
-        <div class="bg-indigo-200 h-2 col-span-3">
+        <div class="bg-indigo-200 h-2 col-span-3 overflow-hidden">
           <div
-            class=" bg-indigo-500 h-full"
+            class="bg-indigo-500 h-full transition-transform duration-1000 -translate-x-full"
+            class:translate-x-0={isBlockViewed}
             data-fill={`${skill.value}%`}
             style={`width: ${skill.value}%`}
           ></div>
