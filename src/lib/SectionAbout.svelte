@@ -1,7 +1,7 @@
 <script>
   import viewport from "../hooks/useViewportAction";
   import SectionTitle from "./SectionTitle.svelte";
-  import banner from "/banner.jpeg";
+  import banner from "/banner.webp";
 
   let isBlockViewed = false;
 </script>

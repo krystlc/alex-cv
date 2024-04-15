@@ -2,7 +2,7 @@
   import { Icon } from "svelte-icons-pack";
   import { CgChevronDoubleDown } from "svelte-icons-pack/cg";
   import viewport from "../hooks/useViewportAction";
-  import alex from "/alex.jpg";
+  import alex from "/alex.webp";
 
   let isCoverViewed = false;
 </script>
