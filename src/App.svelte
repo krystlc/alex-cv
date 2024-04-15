@@ -53,7 +53,7 @@
   <p>That's it, The End!</p>
   <p>
     Oh, here's the <a
-      href="http://"
+      href="https://github.com/krystlc/alex-cv"
       class="underline underline-offset-4 text-indigo-400"
       target="_blank"
       rel="noopener noreferrer">source code</a

@@ -15,7 +15,8 @@
     </p>
     <p class="overflow-hidden text-ellipsis">
       <strong>Clearance:</strong> Secret<br /><strong>Email:</strong>
-      alex.valle@gmail.com<br /><strong>Languages:</strong>
+      <a href="mailto:alex.valle@gmail.com">alex.valle@gmail.com</a><br
+      /><strong>Languages:</strong>
       English, Español
     </p>
   </div>
