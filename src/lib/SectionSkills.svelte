@@ -114,7 +114,7 @@
     </table>
   </div>
   <section
-    class="grid md:grid-cols-2 gap-x-16 gap-y-8 md:gap-y-4"
+    class="grid md:grid-cols-2 gap-x-16 gap-y-4"
     use:viewport
     on:enterViewport={() => (isBlockViewed = true)}
     on:exitViewport={() => (isBlockViewed = false)}

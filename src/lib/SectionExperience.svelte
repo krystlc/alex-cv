@@ -66,8 +66,7 @@
   </div>
   <aside
     class=" bg-indigo-600 p-8 text-center md:text-left md:p-16 my-8 md:my-16 font-bold uppercase text-white tracking-widest text-sm underline underline-offset-4 space-x-4 md:space-x-16 transition-all block duration-1000 opacity-0"
-    class:-translate-x-4={isBlockViewed}
-    class:opacity-100={isBlockViewed}
+    class:is-active={isBlockViewed}
     use:viewport
     on:enterViewport={() => (isBlockViewed = true)}
     on:exitViewport={() => (isBlockViewed = false)}
@@ -88,3 +87,9 @@
     {/each}
   </aside>
 </div>
+
+<style scoped>
+  .is-active {
+    @apply md:-translate-x-4 opacity-100;
+  }
+</style>

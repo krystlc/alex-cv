@@ -24,8 +24,7 @@
       src={banner}
       alt="Alex Valle"
       class=" object-cover h-full block duration-1000 opacity-0"
-      class:-translate-x-4={isBlockViewed}
-      class:opacity-100={isBlockViewed}
+      class:is-active={isBlockViewed}
       use:viewport
       on:enterViewport={() => (isBlockViewed = true)}
       on:exitViewport={() => (isBlockViewed = false)}
@@ -70,3 +69,9 @@
     <p class="text-right font-mono">— Alex Valle</p>
   </div>
 </div>
+
+<style scoped>
+  .is-active {
+    @apply md:-translate-x-4 opacity-100;
+  }
+</style>
