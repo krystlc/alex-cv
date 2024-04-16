@@ -9,7 +9,7 @@
 
 <div class="lg:h-screen grid grid-cols-2 lg:-my-16">
   <div class="lg:flex lg:flex-col justify-center">
-    <div class="px-8 -mb-24 lg:-mr-32 z-10 relative">
+    <div class="lg:px-8 -mb-24 lg:-mr-32 z-10 relative">
       <h1 class="text-7xl lg:text-[6rem] leading-none font-bold">
         Hello, <br />I’m
         <span class=" underline underline-offset-4"> Alex </span>
