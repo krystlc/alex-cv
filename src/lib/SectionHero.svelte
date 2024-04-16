@@ -23,6 +23,7 @@
           src={CgChevronDoubleDown}
           className="text-[4rem] animate-bounce"
         />
+        <span class="sr-only">Next: Experience</span>
       </a>
     </div>
   </div>

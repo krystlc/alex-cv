@@ -31,7 +31,7 @@
     />
   </div>
   <div
-    class="bg-rose-500 text-white p-8 md:p-16 md:float-right md:-mt-16 md:ml-8 md:mb-8 z-10 relative"
+    class="bg-rose-600 text-white p-8 md:p-16 md:float-right md:-mt-16 md:ml-8 md:mb-8 z-10 relative"
   >
     <div class="space-y-8">
       <div>

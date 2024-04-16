@@ -2,7 +2,7 @@
   import SectionTitle from "./SectionTitle.svelte";
 </script>
 
-<div class="max-w-2xl space-y-8">
+<div class="max-w-2xl space-y-8 pb-16">
   <SectionTitle
     title="Contact"
     subtitle="Reach out to connect, collaborate, and create together"

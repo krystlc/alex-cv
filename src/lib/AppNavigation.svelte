@@ -48,8 +48,10 @@
       <span class=" sr-only">Menu</span>
     </button>
     <div class="flex gap-1 font-bold items-center">
-      <span class="text-indigo-500">{sectionNum}</span>
-      <span class="text-xl">/</span>
+      <span
+        class="bg-black text-indigo-100 text-center w-8 pl-2 mr-2 after:contain-none relative after:absolute after:left-full after:inset-y-0 after:border-black after:border-l-8 after:border-t-[1rem] after:border-b-[1rem] after:border-b-transparent"
+        >{sectionNum}</span
+      >
       <span>07</span>
     </div>
   </div>
@@ -68,7 +70,7 @@
     <h2
       class="font-black uppercase tracking-widest underline underline-offset-4"
     >
-      Alex Valle
+      <a href="/">Alex Valle</a>
     </h2>
     <nav>
       <ul class="space-y-4">
@@ -87,8 +89,12 @@
       </ul>
     </nav>
     <div class="flex gap-4 text-2xl font-light">
-      <a href="https://www.linkedin.com/in/alexv/"><Icon src={BsLinkedin} /></a>
-      <a href="https://github.com/krystlc"><Icon src={BsGithub} /></a>
+      <a href="https://www.linkedin.com/in/alexv/"
+        ><Icon src={BsLinkedin} /><span class="sr-only">Linkedin</span></a
+      >
+      <a href="https://github.com/krystlc"
+        ><Icon src={BsGithub} /><span class="sr-only">Github</span></a
+      >
     </div>
   </div>
 </div>
