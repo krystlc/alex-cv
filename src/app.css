@@ -1,13 +1,61 @@
-@tailwind utilities;
-@tailwind components;
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-h3 {
-  @apply text-xl uppercase font-semibold tracking-widest;
+@layer base {
+    body {
+        @apply bg-theme-bg-primary text-theme-text-primary;
+    }
 }
-p {
-  @apply leading-relaxed;
-}
-p a {
-  @apply font-bold  underline underline-offset-2 hover:no-underline;
+
+@layer components {
+    .card {
+        @apply rounded-sm shadow-theme-border-secondary/20 shadow;
+        @apply p-1 bg-theme-bg-primary border border-theme-border-primary;
+    }
+    .card .card-title {
+        @apply uppercase bg-theme-bg-secondary/10 p-2 tracking-widest;
+    }
+    .card .card-body {
+        @apply text-[10px] space-y-2 p-2 leading-snug;
+    }
+
+    .card p a {
+        @apply font-bold underline underline-offset-4 hover:no-underline text-theme-text-accent;
+    }
+
+    .card dt {
+        @apply font-bold mb-1;
+    }
+    .card dd {
+        @apply mb-2 last:mb-0;
+    }
+
+    .btn {
+        @apply py-1 px-2 border rounded-sm;
+        @apply bg-theme-accent-primary/10 text-theme-text-primary;
+        @apply border-t-theme-text-primary/50 border-l-theme-text-primary/50;
+        @apply border-b-theme-bg-secondary/50 border-r-theme-bg-secondary/50;
+        @apply transition-all duration-150;
+    }
+
+    .btn:hover {
+        @apply bg-theme-accent-primary/20;
+    }
+
+    .btn:active {
+        @apply border-b-theme-text-primary/50 border-r-theme-text-primary/50;
+        @apply border-t-theme-bg-secondary/50 border-l-theme-bg-secondary/50;
+        @apply bg-theme-accent-primary/30;
+    }
+
+    /* Selection colors for both themes */
+    ::selection {
+        @apply bg-theme-text-secondary text-theme-bg-primary;
+    }
+
+    input[type="text"] {
+        @apply rounded-sm bg-theme-bg-primary text-theme-text-primary placeholder:text-theme-text-secondary/80 ring-0 outline-none;
+        @apply border border-t-theme-accent-primary/70 border-b-theme-accent-secondary border-r-theme-accent-secondary border-l-theme-accent-primary;
+    }
 }
