@@ -59,9 +59,9 @@
 </script>
 
 <div
-    class="flex flex-col gap-2 -outline-offset-4 outline-theme-border-primary outline-double outline-4 p-2 md:flex-row md:h-screen md:-outline-offset-8 md:p-4"
+    class="flex flex-col gap-1 -outline-offset-4 outline-theme-border-primary/75 outline-double outline-4 p-2 md:flex-row md:h-screen md:-outline-offset-8"
 >
-    <div class="card flex flex-col gap-2 md:h-full md:max-w-xs">
+    <div class="card column">
         <div class="card text-center flex justify-between">
             <div class="flex items-center px-2 gap-2">
                 <h1 class="tracking-widest font-bold text-sm">Alex Valle</h1>
@@ -141,28 +141,28 @@
         <div class="card md:flex-1">
             <h2 class="card-title">contact</h2>
             <div class="card-body">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
-                sit ad veniam praesentium placeat quidem nihil labore provident,
-                fugit iusto, ipsam ducimus nobis sed non aliquam veritatis totam
-                culpa commodi.
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Ipsum sit ad veniam praesentium placeat quidem nihil labore
+                    provident, fugit iusto, ipsam ducimus nobis sed non aliquam
+                    veritatis totam culpa commodi.
+                </p>
             </div>
         </div>
     </div>
-    <div
-        class="hidden card md:flex flex-col gap-2 md:h-full md:w-1/2 md:max-w-2xl"
-    >
-        <div class="card h-48 overflow-hidden">
+    <div class="card column md:flex-1">
+        <div class="card hidden md:block h-48 overflow-hidden">
             <h2 class="card-title">Network Status</h2>
             <div><NeuralNetwork /></div>
         </div>
         <div class="card flex flex-col flex-1">
             <h2 class="card-title">Chat</h2>
-            <div class="flex-1 flex flex-col">
+            <div class="flex-1 flex flex-col p-1">
                 <ChatForm />
             </div>
         </div>
     </div>
-    <div class="card flex-1 flex flex-col gap-2 md:h-full">
+    <div class="card column">
         <div class="card md:max-h-48 md:overflow-auto">
             <h2 class="card-title">Website stats</h2>
             <div class="card-body">

@@ -6,18 +6,27 @@
     body {
         @apply bg-theme-bg-primary text-theme-text-primary;
     }
+    p,
+    li,
+    dd {
+        @apply leading-relaxed;
+    }
 }
 
 @layer components {
+    .column {
+        @apply flex flex-col gap-1 md:h-full md:max-w-xs p-1;
+    }
+
     .card {
-        @apply rounded-sm shadow-theme-border-secondary/20 shadow;
-        @apply p-1 bg-theme-bg-primary border border-theme-border-primary;
+        @apply rounded-sm;
+        @apply bg-theme-bg-primary border border-theme-border-primary/75;
     }
     .card .card-title {
-        @apply uppercase bg-theme-bg-secondary/10 p-2 tracking-widest;
+        @apply uppercase bg-theme-bg-secondary/20 py-1 px-4 tracking-[4px] text-[8px];
     }
     .card .card-body {
-        @apply text-[10px] space-y-2 p-2 leading-snug;
+        @apply text-[10px] space-y-2 px-4 py-2 leading-snug text-justify;
     }
 
     .card p a {
@@ -27,7 +36,9 @@
     .card dt {
         @apply font-bold mb-1;
     }
-    .card dd {
+    .card dd,
+    .card li,
+    .card p {
         @apply mb-2 last:mb-0;
     }
 
