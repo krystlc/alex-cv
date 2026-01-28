@@ -4,69 +4,73 @@
 
 @layer base {
     body {
-        @apply bg-theme-bg-primary text-theme-text-primary;
+        @apply bg-prussian_blue text-dusk_blue-700;
     }
-    p,
-    li,
-    dd {
-        @apply leading-relaxed;
+
+    blockquote {
+        @apply border-l-2 border-space_indigo pl-8 italic;
+    }
+    strong {
+        @apply pb-1 border-b border-dusk_blue font-semibold;
     }
 }
 
 @layer components {
-    .column {
-        @apply flex flex-col gap-1 md:h-full md:max-w-xs p-1;
+    .wrapper {
+        @apply md:grid grid-cols-3 flex-1;
+        @apply md:overflow-auto md:h-screen;
+    }
+    .wrapper main {
+        @apply col-span-2 divide-y divide-space_indigo;
+    }
+    .wrapper aside {
+        @apply hidden md:block col-span-1 px-12 pt-12;
+    }
+
+    .menu {
+        @apply sticky top-12 text-right;
+    }
+    .menu a {
+        @apply whitespace-nowrap relative;
     }
 
     .card {
-        @apply rounded-sm;
-        @apply bg-theme-bg-primary border border-theme-border-primary/75;
+        @apply p-12;
     }
     .card .card-title {
-        @apply uppercase bg-theme-bg-secondary/20 py-1 px-4 tracking-[4px] text-[8px];
+        @apply text-tropical_teal pb-12;
+    }
+    .card .card-title h2 {
+        @apply text-3xl;
+    }
+    .card .card-title h4 {
+        @apply text-base;
     }
     .card .card-body {
-        @apply text-[10px] space-y-2 px-4 py-2 leading-snug text-justify;
+        @apply leading-loose;
     }
 
-    .card p a {
-        @apply font-bold underline underline-offset-4 hover:no-underline text-theme-text-accent;
+    .card a {
+        @apply text-tropical_teal hover:text-neon_ice underline underline-offset-4 transition-all;
     }
 
     .card dt {
-        @apply font-bold mb-1;
+        @apply mb-1;
     }
     .card dd,
-    .card li,
+    .card blockquote,
     .card p {
-        @apply mb-2 last:mb-0;
+        @apply mb-4 last:mb-0 text-pretty;
     }
 
-    .btn {
-        @apply py-1 px-2 border rounded-sm;
-        @apply bg-theme-accent-primary/10 text-theme-text-primary;
-        @apply border-t-theme-text-primary/50 border-l-theme-text-primary/50;
-        @apply border-b-theme-bg-secondary/50 border-r-theme-bg-secondary/50;
-        @apply transition-all duration-150;
-    }
-
-    .btn:hover {
-        @apply bg-theme-accent-primary/20;
-    }
-
-    .btn:active {
-        @apply border-b-theme-text-primary/50 border-r-theme-text-primary/50;
-        @apply border-t-theme-bg-secondary/50 border-l-theme-bg-secondary/50;
-        @apply bg-theme-accent-primary/30;
+    .card .btn {
+        @apply py-1 px-2 border rounded text-tropical_teal bg-space_indigo outline-none border-none;
+        @apply transition-all duration-150 flex items-center no-underline;
+        @apply hover:bg-tropical_teal hover:text-space_indigo;
     }
 
     /* Selection colors for both themes */
     ::selection {
-        @apply bg-theme-text-secondary text-theme-bg-primary;
-    }
-
-    input[type="text"] {
-        @apply rounded-sm bg-theme-bg-primary text-theme-text-primary placeholder:text-theme-text-secondary/80 ring-0 outline-none;
-        @apply border border-t-theme-accent-primary/70 border-b-theme-accent-secondary border-r-theme-accent-secondary border-l-theme-accent-primary;
+        @apply bg-tropical_teal text-prussian_blue;
     }
 }

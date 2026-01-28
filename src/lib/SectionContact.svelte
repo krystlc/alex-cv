@@ -1,23 +1,46 @@
 <script>
-  import SectionTitle from "./SectionTitle.svelte";
+    import {
+        FaBrandsGithub,
+        FaBrandsLinkedin,
+        FaEnvelope,
+    } from "svelte-icons-pack/fa";
+    import SectionTitle from "./SectionTitle.svelte";
+    import { Icon } from "svelte-icons-pack";
+
+    const links = [
+        {
+            title: "Email",
+            href: "mailto:alex.valle@gmail.com",
+            icon: FaEnvelope,
+        },
+        {
+            title: "LinkedIn",
+            href: "https://www.linkedin.com/in/alexv",
+            icon: FaBrandsLinkedin,
+        },
+        {
+            title: "Github",
+            href: "https://github.com/krystlc",
+            icon: FaBrandsGithub,
+        },
+    ];
 </script>
 
-<div class="max-w-2xl space-y-8 pb-16">
-  <SectionTitle
-    title="Contact"
-    subtitle="Reach out to connect, collaborate, and create together"
-  />
-  <div class="grid md:grid-cols-2 gap-x-16">
-    <p>
-      <strong>Name:</strong> Alex Valle<br /><strong>Status:</strong>
-      US Citizen<br /><strong>Location:</strong>
-      Tampa, FL
-    </p>
-    <p class="overflow-hidden text-ellipsis">
-      <strong>Clearance:</strong> Secret<br /><strong>Email:</strong>
-      <a href="mailto:alex.valle@gmail.com">alex.valle@gmail.com</a><br
-      /><strong>Languages:</strong>
-      English, Español
-    </p>
-  </div>
-</div>
+<section id="contact" class="card">
+    <SectionTitle
+        title="Contact"
+        subtitle="Reach out to connect, collaborate, and create together"
+    />
+    <div class="card-body">
+        <ul class="grid grid-cols-3 gap-1">
+            {#each links as link}
+                <li class="flex">
+                    <a href={link.href} class="btn flex gap-2 w-full">
+                        <Icon src={link.icon} size={24} />
+                        <span>{link.title}</span>
+                    </a>
+                </li>
+            {/each}
+        </ul>
+    </div>
+</section>

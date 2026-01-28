@@ -1,77 +1,41 @@
-<script>
-  import viewport from "../hooks/useViewportAction";
-  import SectionTitle from "./SectionTitle.svelte";
-  import banner from "/banner.webp";
-
-  let isBlockViewed = false;
+<script lang="ts">
+    import SectionTitle from "./SectionTitle.svelte";
 </script>
 
-<div>
-  <div class="space-y-8 mb-8">
+<section id="about" class="card">
     <SectionTitle
-      title="About"
-      subtitle="Driven self-taught software engineer"
+        title="About"
+        subtitle="Senior Frontend Engineer | React • Vue • Full-Stack Systems"
     />
-    <p>
-      As a self-taught software engineer, my journey has been one of humble
-      determination and continuous growth. Initially driven by curiosity, I
-      embarked on the path of coding, immersing myself in learning resources and
-      hands-on projects.
-    </p>
-  </div>
-  <div class="h-48">
-    <img
-      src={banner}
-      alt="Alex Valle"
-      class=" object-cover h-full block duration-1000 opacity-0"
-      class:is-active={isBlockViewed}
-      use:viewport
-      on:enterViewport={() => (isBlockViewed = true)}
-      on:exitViewport={() => (isBlockViewed = false)}
-    />
-  </div>
-  <div
-    class="bg-rose-600 text-white p-8 md:p-16 md:float-right md:-mt-16 md:ml-8 md:mb-8 z-10 relative"
-  >
-    <div class="space-y-8">
-      <div>
-        <p class=" uppercase tracking-widest">Email</p>
-        <p>
-          <a href="mailto:alex.valle@gmail.com">alex.valle@gmail.com</a>
-        </p>
-      </div>
-      <div>
-        <p class=" uppercase tracking-widest">Role</p>
-        <p>Software Engineer</p>
-      </div>
-    </div>
-  </div>
-  <div class="space-y-4 pt-8">
-    <p>
-      Through persistent effort and a thirst for knowledge, I've developed solid
-      proficiency in various programming languages, frameworks, and
-      technologies. My approach to challenges is grounded in pragmatism and a
-      commitment to finding effective solutions rather than pursuing perfection.
-    </p>
-    <p>
-      Collaboration is at the heart of my work ethic. I thrive in team
-      environments, valuing the opportunity to learn from others and contribute
-      my skills to collective efforts. Effective communication and adaptability
-      are key strengths that enable me to seamlessly integrate into diverse
-      teams and drive successful outcomes.
-    </p>
-    <p>
-      As I continue to evolve as a developer, I remain steadfast in my belief in
-      the power of continuous learning and improvement. I am eager to bring my
-      skills and collaborative spirit to a team where I can make meaningful
-      contributions and grow alongside talented individuals.
-    </p>
-    <p class="text-right font-mono">— Alex Valle</p>
-  </div>
-</div>
 
-<style scoped>
-  .is-active {
-    @apply md:-translate-x-4 opacity-100;
-  }
-</style>
+    <div class="card-body">
+        <p>
+            Senior Engineer with 6+ years of experience architecting
+            high-performance applications across the
+            <strong>React</strong>
+            and
+            <strong>Vue/Nuxt</strong>
+            ecosystems. I specialize in building type-safe, scalable frontends using
+            <strong>TypeScript</strong>
+            ,
+            <strong>TanStack</strong>
+            , and
+            <strong>Zod</strong>
+            , while bridging the gap to the backend with
+            <strong>Nest.js</strong>
+            and
+            <strong>GraphQL</strong>
+            . Beyond standard UI, I bring niche expertise in geospatial visualization
+            with
+            <strong>CesiumJS</strong>
+            and modern infrastructure via
+            <strong>Netlify</strong>
+            and
+            <strong>Vercel</strong>
+            . I focus on delivering "production-ready" code—prioritizing performance
+            optimization, accessible design systems with
+            <strong>Tailwind CSS</strong>
+            , and mentoring teams to maintain high-velocity, component-driven workflows.
+        </p>
+    </div>
+</section>

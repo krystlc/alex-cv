@@ -34,21 +34,31 @@
             name="twitter:image"
             content="https://krystlc.github.io/alex-cv/alex.webp"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap"
+            rel="stylesheet"
+        />
+
         <title>Alex Valle — Software Engineer</title>
-        <script>
-            // Prevents theme flash
-            const theme = localStorage.getItem("theme");
-            if (theme === "lofi") {
-                document.documentElement.dataset.theme = "lofi";
-            } else if (
-                theme === null &&
-                window.matchMedia("(prefers-color-scheme: light)").matches
-            ) {
-                document.documentElement.dataset.theme = "lofi";
-            }
-        </script>
+        <!--/*
+          _____________________________________________________________
+         |                                                             |
+         |   OH, HELLO THERE.                                          |
+         |   I see you're inspecting the source. Good habit.           |
+         |_____________________________________________________________|
+         |                                                             |
+         |   STK: React | Vue | Nuxt | Nest | TS | Zod | Web3          |
+         |   EXP: DoD-grade security & PCI-compliant Fintech           |
+         |   MSG: If you like what you see in the DOM, we should talk. |
+         |_____________________________________________________________|
+         |                                                             |
+         |   > [Hire Me] : alex.valle@gmail.com                        |
+         |_____________________________________________________________|
+        */-->
     </head>
-    <body class="text-[10px] font-mono font-extralight">
+    <body>
         <div id="app"></div>
         <script type="module" src="/src/main.ts"></script>
     </body>
