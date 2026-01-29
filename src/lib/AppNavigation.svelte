@@ -4,7 +4,7 @@
     import { BsGithub, BsLinkedin } from "svelte-icons-pack/bs";
     import { FaSolidChevronRight } from "svelte-icons-pack/fa";
 
-    export let currentSection: string;
+    export let currentSection: string | null;
 
     const navItems: { label: string; value: SectionID }[] = [
         {

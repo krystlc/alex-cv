@@ -9,7 +9,7 @@
     import { onMount } from "svelte";
     import AppNavigation from "./lib/AppNavigation.svelte";
 
-    let currentSection: SectionID = "about";
+    let currentSection: SectionID = "top";
 
     function handleIntersection(entries: IntersectionObserverEntry[]) {
         const intersectingEntries = entries.filter(
@@ -32,9 +32,9 @@
     }
 
     function syncHashToState() {
-        const hash = window.location.hash.substring(1);
-        const isValidSection = sections.some((s) => s.id === hash);
-        currentSection = (isValidSection ? hash : "about") as SectionID;
+        const hash = window.location.hash.substring(1) as SectionID;
+        const isValidSection = sections.includes(hash);
+        currentSection = isValidSection ? hash : "top";
     }
 
     onMount(() => {
@@ -44,7 +44,7 @@
             threshold: [0.4, 0.8],
         });
 
-        sections.forEach(({ id }) => {
+        sections.forEach((id) => {
             const section = document.getElementById(id);
             if (section) observer.observe(section);
         });
@@ -86,11 +86,11 @@
     });
 </script>
 
-<div class="p-px md:grid md:grid-cols-2">
+<div id="top" class="p-px md:grid md:grid-cols-2">
     <header
         class="md:h-auto md:relative flex items-center flex-1 justify-center"
     >
-        <div class="relative z-10 text-center py-48 md:py-0">
+        <div class="relative z-10 text-center py-80 md:py-0">
             <h1 class="text-4xl font-display text-white">Alex Valle</h1>
             <span class="uppercase tracking-[8px] text-xs text-neon_ice"
                 >Frontend developer</span
